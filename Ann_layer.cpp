@@ -1,7 +1,7 @@
 #include "Ann_layer.h"
 
-Ann_layer::Ann_layer(int in_rows, int in_columns, int out_rows, int out_columns, double alfa, int threads)
-:Basic_layer(in_rows, in_columns, out_rows, out_columns)
+Ann_layer::Ann_layer(const vector<int>& p, double alfa, int threads)
+:Basic_layer(p)
 {
     if(alfa <0) throw std::runtime_error("Alfa out of range");
     this->alfa=alfa;

@@ -2,8 +2,8 @@
 
 
 
-Convolution_layer::Convolution_layer(int in_rows, int in_columns, int out_rows, int out_columns)
-:Basic_layer(in_rows, in_columns, out_rows, out_columns)
+Convolution_layer::Convolution_layer(const vector<int>& p)
+:Basic_layer(p)
 {
     
 }

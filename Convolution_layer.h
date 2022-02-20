@@ -1,6 +1,8 @@
 #ifndef CONV_LAYER_H
 #define CONV_LAYER_H
 
+using namespace std;
+
 #include "Basic_layer.h"
 
 class Convolution_layer: public Basic_layer
@@ -13,7 +15,7 @@ private:
 
     void getMasks();
 public:
-    Convolution_layer(int, int, int, int);
+    Convolution_layer(const vector<int>&);
     void set_out_array();
     void layerFP();
     void layerBP();

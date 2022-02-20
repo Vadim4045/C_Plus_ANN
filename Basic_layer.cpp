@@ -2,11 +2,20 @@
 
 static inline int arrSize(double* arr);
 
-Basic_layer::Basic_layer(int in_rows, int in_columns, int out_rows, int out_columns){
-    this->set_in_rows(in_rows);
-    this->set_in_columns(in_columns);
-    this->set_out_rows(out_rows);
-    this->set_out_columns(out_columns);
+Basic_layer::Basic_layer(const std::vector<int>& p){
+    switch (p.size())
+    {
+        case 4:
+            this->set_in_rows(p[3]);
+        case 3:
+            this->set_in_columns(p[2]);
+        case 2:
+            this->set_out_rows(p[1]);
+        case 1:
+            this->set_in_rows(p[0]);
+        default:
+        break;
+    }
 }
 
 void Basic_layer::set_in_rows(int x){
@@ -57,9 +66,4 @@ void Basic_layer::set_in_arrey(double* arr){
 
 inline int arrSize(double* arr){
     return sizeof(arr)/sizeof(arr[0]);
-}
-
-Basic_layer::~Basic_layer()
-{
-
 }

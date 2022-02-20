@@ -3,8 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include <algorithm>
 #include <stdexcept>
+
+using namespace std;
 
 class Basic_layer
 {
@@ -17,7 +20,7 @@ class Basic_layer
 
 public:
  
-    Basic_layer(int, int, int, int);
+    Basic_layer(const vector<int>&);
     void set_in_rows(int);
     void set_in_columns(int);
     void set_out_rows(int);
@@ -30,7 +33,6 @@ public:
     virtual void set_out_array();
     virtual void layerFP();
     virtual void layerBP();
-    ~Basic_layer();
 };
 
 #endif //_BASIC_LAYER_H
