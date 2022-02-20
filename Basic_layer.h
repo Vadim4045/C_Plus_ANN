@@ -17,6 +17,8 @@ class Basic_layer
     int out_columns;
     double* in_arr;
     double* out_arr;
+    Basic_layer* prev;
+    Basic_layer* next;
 
 public:
  
@@ -29,8 +31,10 @@ public:
     int get_in_columns();
     int get_out_rows();
     int get_out_columns();
+    void set_prev(Basic_layer*);
+    void set_next(Basic_layer*);
     void set_in_arrey(double* arr);
-    virtual void set_out_array();
+    virtual void set_out_array(double*);
     virtual void layerFP();
     virtual void layerBP();
 };

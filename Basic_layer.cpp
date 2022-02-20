@@ -64,6 +64,16 @@ void Basic_layer::set_in_arrey(double* arr){
     this->in_arr = arr;
 }
 
+void Basic_layer::set_prev(Basic_layer* prev)
+{
+    this->prev = prev;
+}
+
+void Basic_layer::set_next(Basic_layer* next)
+{
+    this->next = next;
+}
+
 inline int arrSize(double* arr){
     return sizeof(arr)/sizeof(arr[0]);
 }

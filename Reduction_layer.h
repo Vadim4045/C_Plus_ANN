@@ -11,7 +11,7 @@ private:
     int coeficient;
 public:
     Reduction_layer(const vector<int>&, int);
-    void set_out_array();
+    void set_out_array(double*);
     void layerFP();
     void layerBP();
     ~Reduction_layer();

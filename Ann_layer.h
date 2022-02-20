@@ -9,6 +9,7 @@ class Ann_layer: public Basic_layer
 {
 private:
     double alfa;
+    double* inaccuracy;
     double** weights;
     int threads;
 
@@ -16,7 +17,7 @@ private:
     void load_stored_weights();
 public:
     Ann_layer(const vector<int>&, double, int);
-    void set_out_array();
+    void set_out_array(double*);
     void layerFP();
     void layerBP();
     ~Ann_layer();

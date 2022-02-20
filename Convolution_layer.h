@@ -16,7 +16,7 @@ private:
     void getMasks();
 public:
     Convolution_layer(const vector<int>&);
-    void set_out_array();
+    void set_out_array(double*);
     void layerFP();
     void layerBP();
     ~Convolution_layer();
